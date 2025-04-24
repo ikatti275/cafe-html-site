@@ -1,0 +1,30 @@
+.menu-list{
+    display:grid; /*グリッドレイアウトを使用*/
+    grid-template-columns: 1fr 1fr ;/*二列に分割*/
+    gap: 20px;/*隙間を20pxにする*/  
+    margin: 40px 0;/*上下に20pxの余白を作る*/
+    padding: 10px;/*内側の余白を10px*/
+}
+.menu-item{
+    background-color: fff;/*白色の背景*/
+    padding: 15px;/*内側の余白を15px*/
+    border: 1px solid #ccc;/*薄いグレーの枠線*/
+    border-radius: 10px;/*角を丸くする*/
+    box-shadow: 5px 0px 5px rgba(0,0,0,0.5);/*影をつける*/
+    text-align: center;/*中央揃え*/
+}
+.menu-img{
+    width: 100%;/*幅を100%にする*/
+    height: auto;/*高さは自動調整*/
+    border-radius: 10px;/*角を丸くする*/
+    margin: bottom 10px;/*下に10pxの余白を作る*/
+}
+@media screen and (max-width: 600px) {
+    .menu-list {
+        grid-template-columns: 1fr; /* スマホでは1列にする */
+    }
+    .menu-item {
+        margin: 10px 0; /* 上下の余白を10pxにする */
+    }
+    
+}
