@@ -19,6 +19,7 @@
     border-radius: 10px;/*角を丸くする*/
     margin: bottom 10px;/*下に10pxの余白を作る*/
 }
+
 @media screen and (max-width: 600px) {
     .menu-list {
         grid-template-columns: 1fr; /* スマホでは1列にする */

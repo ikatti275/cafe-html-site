@@ -1,8 +1,7 @@
 /* Basic styles for a webpage */
 
 
-
-nav {
+.global-nav {
     text-align: center;
     padding: 15px;
     background-color: #a1887f;
@@ -36,7 +35,32 @@ nav a {
     max-width: 800px;
     margin: auto;
 }
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.menu-button{
+    display: inline-block; /* これが大事！ */
+    /* 以下、おしゃれボタンのスタイル */
+    padding: 14px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
 
+}
+.menu-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    opacity: 0.9;   
+  }
 
 .greeting-message{
     text-align: center;
