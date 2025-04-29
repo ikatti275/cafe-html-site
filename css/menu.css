@@ -1,23 +1,73 @@
 .menu-list{
     display:grid; /*グリッドレイアウトを使用*/
-    grid-template-columns: 1fr 1fr ;/*二列に分割*/
+    grid-template-columns: repeat(2,300px) ;/*二列に分割*/
     gap: 20px;/*隙間を20pxにする*/  
-    margin: 40px 0;/*上下に20pxの余白を作る*/
+    margin: 40px auto;/*上下に20pxの余白を作る*/
     padding: 10px;/*内側の余白を10px*/
+    max-width: 700px;
+    justify-content: center;/*中央揃え*/
 }
 .menu-item{
-    background-color: fff;/*白色の背景*/
+    background-color: #fff;;/*白色の背景*/
     padding: 15px;/*内側の余白を15px*/
     border: 1px solid #ccc;/*薄いグレーの枠線*/
     border-radius: 10px;/*角を丸くする*/
-    box-shadow: 5px 0px 5px rgba(0,0,0,0.5);/*影をつける*/
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.5);/*影をつける*/
     text-align: center;/*中央揃え*/
+    max-width: 800px;/*最大幅を800pxにする*/
 }
 .menu-img{
     width: 100%;/*幅を100%にする*/
     height: auto;/*高さは自動調整*/
     border-radius: 10px;/*角を丸くする*/
-    margin: bottom 10px;/*下に10pxの余白を作る*/
+    margin-bottom: 10px;/*下に10pxの余白を作る*/
+}
+
+/*サイドバーの中身*/
+.menu-container{
+    display: flex;/*フレックスボックスを使用*/
+    align-items: center;/*中央揃え*/
+    justify-content: center;/*中央揃え*/
+    padding: 20px;/*内側の余白を20px*/
+    max-width: 800px;/*最大幅を800pxにする*/
+    margin: auto;/*中央揃え*/
+    position: relative;/*相対位置にする*/
+}
+.menu-sidebar{
+    width:200px;/*幅を200pxにする*/
+    background-color: #f5f5f5;/*薄いグレーの背景*/
+    padding: 10px;/*内側の余白を10px*/
+}
+.menu-sidebar button{
+    display: block;/*ブロック要素にする*/
+    width: 100%;/*幅を100%にする*/
+    margin: 10px 0;/*上下に10pxの余白を作る*/
+    padding: 10px;/*内側の余白を10px*/
+    font-size: 16pz;/*フォントサイズを16pxにする*/ 
+    cursor: pointer;/*カーソルをポインターにする*/
+    background-color: #e2face;/*青色の背景*/
+    position:  relative;/*相対位置にする*/
+}
+.menu-content{
+    flex: 1;/*残りのスペースを占める*/
+    padding: 20px;/*内側の余白を20px*/
+    background-color: #fff;/*白色の背景*/
+    border-radius: 10px;/*角を丸くする*/
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.5);/*影をつける*/
+    position: relative;/*相対位置にする*/
+}
+.menu-section{
+    opacity: 0;/*初期状態で透明*/
+    transition: opacity 2s ease;/*透明度の変化を0.5秒で行う*/
+    display: none;/*初期状態で非表示*/
+    width: 100%;/*幅を100%にする*/
+    top: 0;/*上に寄せる*/
+    position: relative;/*相対位置にする*/
+}
+.menu-section.active{
+    opacity: 1; /* 透明度を1にする */
+    pointer-events: auto; /* アクティブのときは操作できる */
+    display: block; /* 表示状態にする */
 }
 
 @media screen and (max-width: 600px) {
